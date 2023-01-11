@@ -7,7 +7,7 @@ object V {
   val zio1xVersion               = "1.0.15"
   val zio2xVersion               = "2.0.0"
   val zioJsonVersion             = "0.3.0-RC10"
-  val zioPreludeVersion          = "1.0.0-RC15"
+  val zioPreludeVersion          = "1.0.0-RC16"
   val zioMagicVersion            = "0.3.10"
   val zioKafkaVersion            = "0.17.1"
   val zio2KafkaVersion           = "2.0.0"
@@ -21,6 +21,8 @@ object V {
   val cassandraMigrationsVersion = "2.5.0_v4"
   val liquibaseVersion           = "4.13.0"
   val nettyVersion               = "4.1.79.Final"
+  val spannerVersion             = "6.34.1"
+  val spannerDriverVersion       = "2.7.11"
 
   private val versions: Map[String, String] = {
     import org.snakeyaml.engine.v2.api.{Load, LoadSettings}

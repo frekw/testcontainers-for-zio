@@ -173,6 +173,20 @@ lazy val postgresZio2 =
     )
     .dependsOn(models, core)
 
+lazy val spannerZio2 =
+  project
+    .in(file("modules/spanner"))
+    .settings(
+      zioSeries := ZIOSeries.Series2X,
+      testcontainersScalaSettings,
+      name := "zio-2.0-testcontainers-spanner",
+      libraryDependencies ++= Seq(
+        "com.google.cloud" % "google-cloud-spanner-jdbc" % V.spannerDriverVersion,
+        "com.google.cloud" % "google-cloud-spanner"      % V.spannerVersion
+      )
+    )
+    .dependsOn(models, core)
+
 lazy val kafka =
   project
     .in(file("modules/kafka"))
